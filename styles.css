@@ -1,0 +1,219 @@
+body,html{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    height: 150vh;
+    row-gap: 5px;
+}
+
+.header{
+    grid-area: 1/2/2/3;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+    display: grid;
+    grid-template: 1fr 2fr/1fr 1fr 16fr repeat(12, 1fr);
+    padding: 15px;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.searchbar{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-radius: 30px;
+    height: 3vh;
+    background-color: lightgray;
+    border: none;
+}
+
+.notifications{
+    grid-column-start: 8;
+    grid-column-end: 10;
+}
+
+.name{
+    grid-column-start: 11;
+    grid-column-end: 16;
+    font-weight: bold;
+}
+
+.user-icon{
+    height: 6vh;
+}
+
+.large-user-icon{
+    height: 10vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.greeting{
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.current-username{
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.btn{
+    background-color: #14b8a6;
+    border-radius: 20px;
+    border: none;
+    height: 6vh;
+    color: white;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+.new{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+
+.upload{
+    grid-column-start: 10;
+    grid-column-end: 13;
+}
+
+.share{
+    grid-column-start: 13;
+    grid-column-end: 16;
+}
+
+.sidebar{
+    background-color: #14b8a6;
+    grid-area: 1/1/4/2;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 15vh repeat(5, 6vh) 15vh repeat(3, 6vh);
+    justify-content: center;
+}
+
+img{
+    height: 3vh;
+    margin-right: 5px;
+}
+
+.dashboard-icon{
+    filter: invert(95%) sepia(99%) saturate(2%) hue-rotate(127deg) brightness(111%) contrast(100%);
+}
+
+.sidebar-option{
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+}
+
+.dashboard{
+    height: 4vh;
+    font-size: 4vh;
+    font-weight: bold;
+    align-content: center;
+    color: white;
+}
+
+.content{
+    background-color: lightgrey;
+    grid-area: 2/2/4/3;
+    display: grid;
+    grid-template-rows: 24px 5fr 24px 4fr;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 15px;
+    font-size: 22px;
+    font-weight: bold;  
+}
+
+.projects{
+    grid-area: 1/1/5/3;
+    display: grid;
+    gap: 15px;
+    grid-template: 24px repeat(3, 1fr)/repeat(2, 1fr);
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    grid-area: 1/1/2/5;
+}
+
+.project-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    grid-area: 2/1/3/5;
+}
+
+.project-options{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    gap: 10px;
+    display: flex;
+}
+
+.announcment-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.project{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+    border-left: 5px solid #fde047;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    font-weight: normal;
+    display: grid;
+    grid-template-columns: repeat(1, 7fr) repeat(3, 1fr);
+}
+
+.announcments, .trending{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+    font-size: 14px;
+    font-weight: normal;
+    padding: 20px;
+}
+
+.announcments{
+    margin-bottom: 30px;
+}
+
+.trending{
+    grid-column-start: 3;
+    display: grid;
+    grid-template: repeat(4,1fr)/1fr;
+}
+
+.trending-project{
+    display: flex;
+    gap: 10px;
+}
+
+.username{
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.project-name{
+    font-size: 2vh;
+    color: gray;
+}
